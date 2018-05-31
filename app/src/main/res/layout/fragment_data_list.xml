@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/detailsElementBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Total : 0"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+
+    <!--<ListView-->
+        <!--android:id="@+id/listview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@android:color/holo_green_light" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/datalistrv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark" />
+</LinearLayout>
