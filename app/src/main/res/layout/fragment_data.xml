@@ -14,7 +14,7 @@
 
     <TextView
         android:id="@+id/tvnum"
-        android:layout_width="wrap_content"
+        android:layout_width="10dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
@@ -22,18 +22,18 @@
         android:textColor="@color/colorPrimary"
         android:textStyle="bold" />
 
-    <TextView
+    <ImageView
         android:id="@+id/tv0"
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_weight="1"
-        android:gravity="center"
-        android:text="="
-        android:textColor="@color/colorPrimary" />
+        card_view:srcCompat="@drawable/ic_history" />
+
 
     <TextView
         android:id="@+id/tv61"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
@@ -42,7 +42,7 @@
 
     <TextView
         android:id="@+id/tv2345"
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
@@ -51,7 +51,7 @@
 
     <TextView
         android:id="@+id/tv7"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"

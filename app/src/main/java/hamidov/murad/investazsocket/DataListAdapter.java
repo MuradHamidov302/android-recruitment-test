@@ -2,9 +2,11 @@ package hamidov.murad.investazsocket;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -17,7 +19,6 @@ import org.json.JSONObject;
 
 public class DataListAdapter  extends RecyclerView.Adapter<DataListAdapter.listViewHolder> {
 
-
     JSONArray datas;
     Context context;
     CustomItemClickListener listeners;
@@ -25,7 +26,7 @@ public class DataListAdapter  extends RecyclerView.Adapter<DataListAdapter.listV
 
     public DataListAdapter(Context context, JSONArray data, CustomItemClickListener listener) {
         this.datas = data;
-            this.context=context;
+        this.context=context;
         this.listeners=listener;
     }
 
@@ -42,7 +43,6 @@ public class DataListAdapter  extends RecyclerView.Adapter<DataListAdapter.listV
             }
         });
 
-
         return new listViewHolder(v);
     }
 
@@ -52,29 +52,26 @@ public class DataListAdapter  extends RecyclerView.Adapter<DataListAdapter.listV
         JSONObject item= null;
         try {
             item = datas.getJSONObject(position);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        holder.tvnum.setText(""+(position+1)+" ");
-        try {
             holder.tv61.setText(item.getString("6")+" - "+item.getString("1"));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
             holder.tv2345.setText(item.getString("2")+"\n"+item.getString("3")+"\n"+item.getString("4")
-            +"\n"+item.getString("5"));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        try {
+                    +"\n"+item.getString("5"));
             holder.tv7.setText(item.getString("7"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
+        holder.tvnum.setText(""+(position+1)+" ");
+
+
+        String check ;
         try {
-           holder.tv0.setText(item.getString("0"));
+           check=item.getString("0");
+            Log.e("check ----","-"+check+"-  qwert");
+           if (check.equals("up")){
+                holder.tv0.setImageResource(R.drawable.ic_up);
+            } else if (check.equals("down")) {
+                holder.tv0.setImageResource(R.drawable.ic_down);
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -91,8 +88,8 @@ public class DataListAdapter  extends RecyclerView.Adapter<DataListAdapter.listV
 
     public class listViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView tvnum,tv0,tv61,tv2345,tv7;
-
+        TextView tvnum,tv61,tv2345,tv7;
+        ImageView tv0;
 
         public listViewHolder(View itemView) {
             super(itemView);
