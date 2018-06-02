@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/backr"
     android:orientation="vertical">
 
     <LinearLayout
@@ -27,7 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:background="@color/cardview_light_background"
-            android:text="Disconnect" />
+            android:text="Disconnect"
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/btnshowdb"
@@ -37,7 +39,8 @@
             android:background="@color/cardview_light_background"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            android:text="show store data" />
+            android:text="show store data"
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
 

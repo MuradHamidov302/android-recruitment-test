@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="50" />
+                                                <entry key="scalingPercent" value="48" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,8 +34,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="fefff9" />
-                                      <entry key="foregroundImage" value="C:\Users\TexnoUsta\Desktop\test.png" />
+                                      <entry key="backgroundColor" value="1d9698" />
+                                      <entry key="foregroundImage" value="C:\Users\TexnoUsta\Desktop\logoaz.jpg" />
+                                      <entry key="legacyIconShape" value="CIRCLE" />
+                                      <entry key="webIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>

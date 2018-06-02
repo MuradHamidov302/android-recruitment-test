@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,10 +31,11 @@ public class DataBase extends SQLiteOpenHelper {
         super(context,DbName,null,Version);
     }
 
+    //create table--------
     @Override
     public void onCreate(SQLiteDatabase db) {
       //  IF NOT EXISTS
-        db.execSQL("CREATE TABLE  "+TableName+" ("+ ROW_id+" INTEGER PRIMARY KEY AUTOINCREMENT," +
+        db.execSQL("CREATE TABLE "+TableName+" ("+ ROW_id+" INTEGER PRIMARY KEY AUTOINCREMENT," +
                         ROW_0+" TEXT,"+
                         ROW_1+" TEXT,"+
                         ROW_2+" TEXT,"+
@@ -52,7 +52,7 @@ public class DataBase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-
+//create new data ---------------------------
     public void CreateData(JSONArray result){
 
         for (int i=0;i<result.length();i++){
@@ -73,7 +73,6 @@ public class DataBase extends SQLiteOpenHelper {
                     cv.put(ROW_5,data.getString("5"));
                     cv.put(ROW_6,data.getString("6"));
                     cv.put(ROW_7,data.getString("7"));
-                    Log.e("cv--------",data.toString());
 
                     sdp.insert(TableName,null,cv);
                     sdp.close();
@@ -85,6 +84,7 @@ public class DataBase extends SQLiteOpenHelper {
     }
 
 
+    //table delete all data-----
     public void RemoveData(){
         SQLiteDatabase sdp=this.getWritableDatabase();
         sdp.delete(TableName,null,null);

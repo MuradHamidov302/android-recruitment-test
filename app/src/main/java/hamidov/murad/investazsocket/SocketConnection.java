@@ -78,7 +78,7 @@ public class SocketConnection {
         }
     }
 
-
+//check socket connet or disconnect
     public static void setCheckconnect(boolean setconnectArg){
           setconnect=setconnectArg;
         if (setconnect) {
