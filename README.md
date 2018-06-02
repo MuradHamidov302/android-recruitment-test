@@ -1,10 +1,10 @@
-###Haqqında
+### Haqqında
 
 "Connect" və "Disconnect" düyməsi dataların yenilənməsini başlatıb , dyandırmaq üçündür . Ekrann sol üst hissesində yaşil ikon görünürsə əlaqə qurulub , qırmızı ikon görünürsə əlaqə dayandırılıb.
 "Show store data" düyməsi sql database də cache olunmuş datları göstərir.
 Socket dən gələn datalar avtomatik olaraq hər yeniləndikdə sql database də əvvəlki datalar silinərək yenisilə əvəz olunur.
 
-###-------------------------------------------------------------------------------------------------------------------
+### -------------------------------------------------------------------------------------------------------------------
 
 Android Recruitment test
 
